@@ -1,3 +1,53 @@
-<% @channels.each do |channel| %>
-  <div><%= channel["name"] %></div>
+<style>
+div {margin-bottom: .5em;}
+</style>
+
+<h1>Product Channels</h1>
+
+<% @product_channels.each do |channel| %>
+  <div class="channel">
+    <%= channel["name"] %>
+    (<%= channel["members"].size %>)<br>
+    <small><%= channel["purpose"]["value"] %></small>
+  </div>
+<% end %>
+
+<h1>Skill Channels</h1>
+
+<% @skill_channels.each do |channel| %>
+  <div class="channel">
+    <%= channel["name"] %>
+    (<%= channel["members"].size %>)<br>
+    <small><%= channel["purpose"]["value"] %></small>
+  </div>
+<% end %>
+
+<h1>City Channels</h1>
+
+<% @city_channels.each do |channel| %>
+  <div class="channel">
+    <%= channel["name"] %>
+    (<%= channel["members"].size %>)<br>
+    <small><%= channel["purpose"]["value"] %></small>
+  </div>
+<% end %>
+
+<h1>Organizer Channels</h1>
+
+<% @groups.each do |group| %>
+  <div class="channel">
+    <%= group["name"] %>
+    (<%= group["members"].size %>)<br>
+    <small><%= group["purpose"]["value"] %></small>
+  </div>
+<% end %>
+
+<h1>Organizer City Channels</h1>
+
+<% @city_groups.each do |group| %>
+  <div class="channel">
+    <%= group["name"] %>
+    (<%= group["members"].size %>)<br>
+    <small><%= group["purpose"]["value"] %></small>
+  </div>
 <% end %>
