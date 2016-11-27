@@ -6,4 +6,5 @@ gem "thin"
 
 group :development do
   gem "sinatra-reloader"
+  gem "dotenv"
 end
